@@ -1,0 +1,13 @@
+.app__subheading {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.app__subheading h1 {
+  font-family: var(--font-mont);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 49px;
+  color: #000000;
+}

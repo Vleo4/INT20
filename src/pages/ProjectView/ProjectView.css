@@ -1,0 +1,115 @@
+.app__projectView {
+  display: flex;
+  flex-direction: column;
+  padding-left: 383px;
+  padding-right: 383px;
+  margin-top: 75px;
+}
+
+.app__projectView h1 {
+  font-family: var(--font-mont);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 49px;
+  color: #000000;
+}
+
+.app__projectView h2 {
+  font-family: var(--font-mont);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+
+.app__projectView p {
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+}
+
+.app__projectView-stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 150px;
+  gap: 1rem;
+}
+
+.app__projectView-stats button {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #afcbe0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  padding: 20px 140px;
+  cursor: pointer;
+
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+}
+
+.app__projectView-stats button:hover {
+  background: #87bae0;
+  transition: 0.5s ease;
+}
+
+@media screen and (max-width: 1630px) {
+  .app__projectView {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+
+@media screen and (max-width: 1383px) {
+  .app__projectView {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .app__projectView h2 {
+    font-size: 25px;
+    line-height: 32px;
+  }
+
+  .app__projectView p {
+    font-family: var(--font-mont);
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 32px;
+    color: #000000;
+  }
+
+  .app__projectView-stats button {
+    font-size: 27px;
+    line-height: 32px;
+    padding: 20px 70px;
+  }
+}
+
+@media screen and (max-width: 565px) {
+  .app__projectView-stats {
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .app__projectView {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

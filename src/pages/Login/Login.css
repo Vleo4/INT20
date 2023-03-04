@@ -32,13 +32,13 @@
   font-weight: 400;
   font-size: 32px;
   line-height: 39px;
-  color: #1E2542;
+  color: #1e2542;
   margin-top: 20px;
   margin-bottom: 33px;
 }
 
 .app__login-header_logo {
-  background: #d9d9d9;
+  background: #8C9DA7;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: 100px;
   height: 100px;
@@ -46,6 +46,8 @@
   position: relative;
   display: flex;
   top: 50px;
+  justify-content: center;
+  align-items: center;
 }
 
 .app__login-main {
@@ -140,7 +142,7 @@
   align-items: center;
   cursor: pointer;
   outline: none;
-  background: #AFCBE0;
+  background: #afcbe0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 80px;
 
@@ -161,7 +163,7 @@
 
 .app__login-main_loginCard form button:hover,
 .app__login-main_signupCard form button:hover {
-    background: #7cafd6;
+  background: #7cafd6;
   transition: 0.5s ease;
 }
 
@@ -232,6 +234,10 @@
   .app__login-main_signupCard {
     margin-top: 90px;
     margin-bottom: 0px;
+  }
+
+  .app__login-main_signupCard {
+    margin-bottom: 60px;
   }
 
   .app__login-main {

@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { Navbar, Footer } from "./components";
 import "./App.css";
-import { Login } from "./pages";
+import { CreateProject, Login, Projects, ProjectView } from "./pages";
 
 const App = () => {
   return (
@@ -11,6 +11,9 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/login" exact element={<Login />} />
+          <Route path="/projects" exact element={<Projects />} />
+          <Route path="/projects/project" exact element={<ProjectView />} />
+          <Route path="/create-project" exact element={<CreateProject />} />
         </Routes>
         <Footer />
       </BrowserRouter>

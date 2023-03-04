@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css";
+import LogoLogin from '../../assets/LogoLogin.png';
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -26,7 +27,7 @@ const Login = () => {
           командному середовищі
         </h3>
         <h4>Розпочніть свій шлях до успіху прямо зараз!</h4>
-        <div className="app__login-header_logo"></div>
+        <div className="app__login-header_logo"><img src={LogoLogin} alt="LogoLogin" /></div>
       </div>
       <div className="app__login-main">
         <div className="app__login-main_loginCard">

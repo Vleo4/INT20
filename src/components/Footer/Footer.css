@@ -1,0 +1,25 @@
+.app__footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+  background: #ffffff;
+}
+
+.app__footer p {
+  font-family: var(--font-mont);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.app__footer p:first-child{
+    margin-bottom: 5px;
+}
+
+.app__footer img{
+    margin-bottom: 20px;
+    cursor: pointer;
+}

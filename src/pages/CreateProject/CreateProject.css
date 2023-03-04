@@ -1,0 +1,156 @@
+.app__createProject {
+  display: flex;
+  flex-direction: column;
+  padding-left: 383px;
+  padding-right: 383px;
+  margin-top: 75px;
+}
+
+.app__createProject form {
+  display: flex;
+  flex-direction: column;
+}
+
+.app__createProject form h2 {
+  font-family: var(--font-mont);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+
+.app__createProject form input[type="text"] {
+  all: unset;
+
+  display: flex;
+  align-items: center;
+  background: #afcbe0;
+  border-radius: 30px;
+  padding: 20px;
+  max-width: 520px;
+
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+}
+
+.app__createProject form textarea {
+  all: unset;
+  background: #afcbe0;
+  border-radius: 30px;
+  padding: 20px;
+
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+
+  max-width: 1135px;
+}
+
+.app__createProject select {
+  all: unset;
+  cursor: pointer;
+  background: #afcbe0;
+  border-radius: 30px;
+  padding: 20px;
+  align-items: center;
+  display: flex;
+
+  max-width: 520px;
+
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+
+  background-image: url("../../assets/ArrowDown.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px) center;
+}
+
+.app__createProject select option {
+  background: #cbe1f1;
+  border-radius: 30px;
+}
+
+.app__createProject button {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #5b9cc3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+
+  margin-top: 150px;
+  margin-bottom: 60px;
+  max-width: 520px;
+}
+
+.app__createProject button:hover {
+  background: #a7c5d8;
+  transition: 0.5s ease;
+}
+
+@media screen and (max-width: 1630px) {
+  .app__createProject {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+
+@media screen and (max-width: 1383px) {
+  .app__createProject {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .app__createProject form h2 {
+    font-size: 27px;
+    line-height: 32px;
+  }
+  .app__createProject form input[type="text"] {
+    font-size: 27px;
+    line-height: 32px;
+  }
+  .app__createProject form textarea {
+    font-size: 27px;
+    line-height: 32px;
+  }
+  .app__createProject select {
+    font-size: 27px;
+    line-height: 32px;
+  }
+  .app__createProject button {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 27px;
+    line-height: 32px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .app__createProject {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

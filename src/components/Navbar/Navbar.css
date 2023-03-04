@@ -180,4 +180,7 @@
   .app__navbar {
     padding: 1rem 2rem;
   }
+  .app__navbar-logo h2 {
+    display: none;
+  }
 }

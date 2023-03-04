@@ -1,0 +1,33 @@
+.app__projects {
+  display: flex;
+  flex-direction: column;
+  margin-top: 75px;
+  padding-left: 383px;
+  padding-right: 383px;
+}
+
+.app__projects-posts {
+  margin-top: 26px;
+  margin-bottom: 26px;
+}
+
+@media screen and (max-width: 1630px) {
+  .app__projects {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+
+@media screen and (max-width: 1383px) {
+  .app__projects {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .app__projects {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

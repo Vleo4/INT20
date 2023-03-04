@@ -1,0 +1,93 @@
+.app__projectCard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #afcbe0;
+  border-radius: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 33px;
+  padding-right: 22px;
+  margin-bottom: 20px;
+}
+
+.app__projectCard h2 {
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 49px;
+  color: #000000;
+}
+
+.app__projectCard-desc {
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+  max-height: 117px;
+  overflow-y: auto;
+}
+
+.app__projectCard-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.app__projectCard-info p {
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+}
+
+.app__projectCard-info_likes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.app__projectCard-info_likes p {
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+}
+
+.app__projectCard-info_likes img {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 705px) {
+  .app__projectCard h2 {
+    font-size: 30px;
+    line-height: 39px;
+  }
+
+  .app__projectCard-desc {
+    font-size: 22px;
+    line-height: 29px;
+  }
+  .app__projectCard-info p {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .app__projectCard-info_likes p {
+    font-size: 22px;
+    line-height: 29px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .app__projectCard {
+    padding-top: 15px;
+    padding-left: 28px;
+    padding-right: 17px;
+    margin-bottom: 15px;
+  }
+}
