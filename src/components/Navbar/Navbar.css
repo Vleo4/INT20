@@ -140,6 +140,58 @@
   margin: 2rem;
 }
 
+.app__navbar-links_dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.app__navbar-links_dropdown-dropbtn {
+  all: unset;
+  display: flex;
+  justify-content: space-between;
+  background: #afcbe0;
+  border-radius: 10px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  width: 143px;
+}
+
+.app__navbar-links_dropdown-content {
+  display: none;
+  position: absolute;
+  background: #cbe1f1;
+  border-radius: 10px;
+
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.app__navbar-links_dropdown-content .app__navbar-links_link {
+  display: block;
+  padding: 5px;
+}
+
+.app__navbar-links_dropdown:hover .app__navbar-links_dropdown-content {
+  display: block;
+}
+
+.app__navbar-links_dropdown:hover .app__navbar-links_dropdown-dropbtn {
+  color: black;
+  transition: 0.5s ease;
+}
+
+.app__navbar-links_dropdown:hover .app__navbar-links_dropdown-dropbtn img {
+  transform: rotate(180deg);
+}
+
 @media screen and (max-width: 1383px) {
   .app__navbar {
     padding: 1rem 60px;
@@ -164,7 +216,7 @@
   }
 }
 
-@media screen and (max-width: 925px) {
+@media screen and (max-width: 950px) {
   .app__navbar-links {
     display: none;
   }
