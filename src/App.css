@@ -9,3 +9,9 @@ a {
   color: unset;
   text-decoration: none;
 }
+
+.flex__center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

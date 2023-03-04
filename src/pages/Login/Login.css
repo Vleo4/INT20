@@ -1,5 +1,260 @@
-.app__login{
-    display: flex;
+.app__login {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.app__login-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../assets/LoginHeaderBg1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0 120px;
+  text-align: center;
+}
+
+.app__login-header h3 {
+  font-family: var(--font-mont);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 49px;
+  margin-top: 150px;
+  max-width: 1196px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.app__login-header h4 {
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  color: #1E2542;
+  margin-top: 20px;
+  margin-bottom: 33px;
+}
+
+.app__login-header_logo {
+  background: #d9d9d9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  top: 50px;
+}
+
+.app__login-main {
+  display: flex;
+  flex-direction: row;
+  background-image: url("../../assets/LoginBg1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: space-between;
+  padding-left: 120px;
+  padding-right: 120px;
+  gap: 1rem;
+}
+.app__login-main_loginCard,
+.app__login-main_signupCard {
+  margin-top: 90px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(190, 203, 210, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 80px;
+  padding-top: 30px;
+  padding-bottom: 70px;
+  padding-left: 95px;
+  padding-right: 95px;
+  height: 100%;
+  max-height: 650px;
+  width: 100%;
+  max-width: 708px;
+}
+
+.app__login-main_loginCard h3,
+.app__login-main_signupCard h3 {
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 49px;
+  color: #000000;
+  text-align: center;
+}
+
+.app__login-main_loginCard form,
+.app__login-main_signupCard form {
+  display: flex;
+  flex-direction: column;
+}
+.app__login-main_loginCard form input[type="text"],
+.app__login-main_loginCard form input[type="password"],
+.app__login-main_signupCard form input[type="text"],
+.app__login-main_signupCard form input[type="password"],
+.app__login-main_signupCard form input[type="email"] {
+  background: #ffffff;
+  border-radius: 80px;
+  padding: initial;
+  margin: initial;
+  font-size: initial;
+  border: initial;
+
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: black;
+
+  padding: 25px 40px;
+}
+
+.app__login-main_loginCard form input[type="text"]::placeholder,
+.app__login-main_loginCard form input[type="password"]::placeholder,
+.app__login-main_signupCard form input[type="text"]::placeholder,
+.app__login-main_signupCard form input[type="password"]::placeholder,
+.app__login-main_signupCard form input[type="email"]::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.app__login-main_loginCard form input[type="text"]:focus,
+.app__login-main_loginCard form input[type="password"]:focus,
+.app__login-main_signupCard form input[type="text"]:focus,
+.app__login-main_signupCard form input[type="password"]:focus,
+.app__login-main_signupCard form input[type="email"]:focus {
+  border: none;
+  outline: none;
+}
+
+.app__login-main_loginCard form button,
+.app__login-main_signupCard form button {
+  all: unset;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  background: #AFCBE0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 80px;
+
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44px;
+  color: #000000;
+
+  padding: 18px;
+
+  margin-top: 190px;
+}
+
+.app__login-main_signupCard form button {
+  margin-top: 71px;
+}
+
+.app__login-main_loginCard form button:hover,
+.app__login-main_signupCard form button:hover {
+    background: #7cafd6;
+  transition: 0.5s ease;
+}
+
+@media screen and (max-width: 1383px) {
+  .app__login-main_signupCard form button {
+    margin-top: 76px;
+  }
+
+  .app__login-header {
+    padding: 0 60px;
+  }
+  .app__login-header h3 {
+    font-size: 30px;
+    line-height: 39px;
+  }
+
+  .app__login-header h4 {
+    font-size: 22px;
+    line-height: 29px;
+  }
+  .app__login-main {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .app__login-main_loginCard h3,
+  .app__login-main_signupCard h3 {
+    font-size: 30px;
+    line-height: 39px;
+  }
+
+  .app__login-main_loginCard form input[type="text"],
+  .app__login-main_loginCard form input[type="password"],
+  .app__login-main_signupCard form input[type="text"],
+  .app__login-main_signupCard form input[type="password"],
+  .app__login-main_signupCard form input[type="email"] {
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .app__login-main_loginCard form button,
+  .app__login-main_signupCard form button {
+    font-size: 26px;
+    line-height: 34px;
+  }
+  .app__login-main_loginCard,
+  .app__login-main_signupCard {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+}
+
+@media screen and (max-width: 933px) {
+  .app__login-header {
+    padding: 0 2rem;
+  }
+  .app__login-main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .app__login-main {
     flex-direction: column;
-    min-height: 100%;
+    align-items: center;
+  }
+  .app__login-main_loginCard,
+  .app__login-main_signupCard {
+    margin-top: 90px;
+    margin-bottom: 0px;
+  }
+
+  .app__login-main {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+  .app__login-main_loginCard,
+  .app__login-main_signupCard {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .app__login-main {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .app__login-main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
