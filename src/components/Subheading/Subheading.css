@@ -2,6 +2,8 @@
   display: flex;
   width: 100%;
   justify-content: flex-start;
+  margin-top: 75px;
+  flex-direction: column;
 }
 
 .app__subheading h1 {
@@ -10,4 +12,19 @@
   font-size: 40px;
   line-height: 49px;
   color: #000000;
+}
+
+.app__subheading span {
+  width: 100%;
+  max-width: 1200px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.2);
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 950px) {
+  .app__subheading h1 {
+    font-size: 35px;
+    line-height: 44px;
+  }
 }

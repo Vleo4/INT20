@@ -1,9 +1,10 @@
 .app__profile {
   display: flex;
   flex-direction: column;
-  padding-left: 383px;
-  padding-right: 383px;
-  margin-top: 75px;
+  padding-left: 140px;
+  padding-right: 140px;
+  margin-left: 243px;
+  margin-right: 243px;
 }
 
 .app__profile-info {
@@ -118,6 +119,8 @@
 
 @media screen and (max-width: 1630px) {
   .app__profile {
+    margin-left: 120px;
+    margin-right: 120px;
     padding-left: 120px;
     padding-right: 120px;
   }
@@ -125,6 +128,8 @@
 
 @media screen and (max-width: 1383px) {
   .app__profile {
+    margin-left: 2rem;
+    margin-right: 2rem;
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -154,6 +159,8 @@
 
 @media screen and (max-width: 450px) {
   .app__profile {
+    margin-left: 0rem;
+    margin-right: 0rem;
     padding-left: 2rem;
     padding-right: 2rem;
   }

@@ -5,6 +5,10 @@
   scroll-behavior: smooth;
 }
 
+body {
+  background: #EFF5F9;
+}
+
 a {
   color: unset;
   text-decoration: none;
@@ -14,4 +18,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.bg__wrap {
+  background: #ffffff;
 }

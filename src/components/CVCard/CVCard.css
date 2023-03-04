@@ -1,0 +1,77 @@
+.app__cvCard {
+  display: flex;
+  flex-direction: column;
+  background: #afcbe0;
+  border-radius: 30px;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-bottom: 54px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+
+  cursor: pointer;
+}
+
+.app__cvCard h2 {
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 49px;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+.app__cvCard-hard,
+.app__cvCard-soft,
+.app__cvCard-languages {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.app__cvCard-hard p:first-child,
+.app__cvCard-soft p:first-child,
+.app__cvCard-languages p:first-child {
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+  white-space: nowrap;
+}
+.app__cvCard-hard p:last-child,
+.app__cvCard-soft p:last-child,
+.app__cvCard-languages p:last-child {
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 950px) {
+  .app__cvCard h2 {
+    font-family: var(--font-mont);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 39px;
+    color: #000000;
+    margin-bottom: 5px;
+  }
+  .app__cvCard-hard p:first-child,
+  .app__cvCard-soft p:first-child,
+  .app__cvCard-languages p:first-child {
+    font-size: 22px;
+    line-height: 29px;
+  }
+  .app__cvCard-hard p:last-child,
+  .app__cvCard-soft p:last-child,
+  .app__cvCard-languages p:last-child {
+    font-size: 22px;
+    line-height: 29px;
+  }
+}

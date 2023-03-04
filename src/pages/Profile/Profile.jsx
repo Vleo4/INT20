@@ -25,7 +25,7 @@ const Profile = () => {
     setIsTakeImageRotated(!isImageRotated);
   };
   return (
-    <div className="app__profile">
+    <div className="app__profile bg__wrap">
       <Subheading title="Профіль" />
       <div className="app__profile-info">
         <img src={ProfilePhoto} alt="ProfilePhoto" />

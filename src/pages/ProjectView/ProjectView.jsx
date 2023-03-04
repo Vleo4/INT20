@@ -4,7 +4,7 @@ import Like from "../../assets/Like.png";
 
 const ProjectView = () => {
   return (
-    <div className="app__projectView">
+    <div className="app__projectView bg__wrap">
       <h1>Title</h1>
       <h2>Про проєкт:</h2>
       <p>

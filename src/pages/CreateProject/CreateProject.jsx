@@ -5,7 +5,7 @@ import ArrowDown from "../../assets/ArrowDown.png";
 
 const CreateProject = () => {
   return (
-    <div className="app__createProject">
+    <div className="app__createProject bg__wrap">
       <Subheading title="Створити проєкт" />
       <form>
         <h2>Назва проєкта</h2>

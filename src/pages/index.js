@@ -3,5 +3,19 @@ import Projects from "./Projects/Projects";
 import ProjectView from "./ProjectView/ProjectView";
 import CreateProject from "./CreateProject/CreateProject";
 import Profile from "./Profile/Profile";
+import Requests from "./Requests/Requests";
+import CVs from "./CVs/CVs";
+import CreateCV from "./CreateCV/CreateCV";
+import CVView from "./CVView/CVView";
 
-export { Login, Projects, ProjectView, CreateProject, Profile };
+export {
+  Login,
+  Projects,
+  ProjectView,
+  CreateProject,
+  Profile,
+  Requests,
+  CVs,
+  CreateCV,
+  CVView,
+};

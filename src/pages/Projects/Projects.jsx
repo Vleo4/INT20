@@ -4,7 +4,7 @@ import "./Projects.css";
 
 const Projects = () => {
   return (
-    <div className="app__projects">
+    <div className="app__projects bg__wrap">
       <Subheading title="Проєкти" />
       <div className="app__projects-posts">
         <ProjectCard />

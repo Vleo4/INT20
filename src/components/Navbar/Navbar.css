@@ -149,7 +149,7 @@
   all: unset;
   display: flex;
   justify-content: space-between;
-  background: #afcbe0;
+
   border-radius: 10px;
   padding: 5px 10px;
   display: flex;
@@ -186,6 +186,7 @@
 .app__navbar-links_dropdown:hover .app__navbar-links_dropdown-dropbtn {
   color: black;
   transition: 0.5s ease;
+  background: #afcbe0;
 }
 
 .app__navbar-links_dropdown:hover .app__navbar-links_dropdown-dropbtn img {

@@ -43,7 +43,7 @@ const Navbar = () => {
             <Link className="app__navbar-links_link" to="/my-cv">
               Моє резюме
             </Link>
-            <Link className="app__navbar-links_link" to="/cv">
+            <Link className="app__navbar-links_link" to="/cvs">
               Усі резюме
             </Link>
           </div>
@@ -102,7 +102,7 @@ const Navbar = () => {
               <Link to="/my-cv" className="app__navbar-smallscreen_links-link">
                 Моє резюме
               </Link>
-              <Link to="/cv" className="app__navbar-smallscreen_links-link">
+              <Link to="/cvs" className="app__navbar-smallscreen_links-link">
                 Усі резюме
               </Link>
               <Link

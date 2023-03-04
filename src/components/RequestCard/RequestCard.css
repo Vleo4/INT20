@@ -1,0 +1,82 @@
+.app__requestCard {
+  display: flex;
+  flex-direction: column;
+  background: #afcbe0;
+  border-radius: 30px;
+
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  padding-right: 30px;
+  margin-bottom: 20px;
+}
+
+.app__requestCard h2 {
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 49px;
+  color: #000000;
+}
+
+.app__requestCard-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app__requestCard-content_text {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.app__requestCard-content_text-link {
+  cursor: pointer;
+  background: #eff5f9;
+  border-radius: 30px;
+
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44px;
+  color: #000000;
+  padding: 13px 20px;
+}
+
+.app__requestCard-content_buttons {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.app__requestCard-content_buttons button {
+  all: unset;
+  cursor: pointer;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+@media screen and (max-width: 1055px) {
+  .app__requestCard-content {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 855px) {
+  .app__requestCard-content_text {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .app__requestCard-content_text-link {
+    font-size: 26px;
+    line-height: 34px;
+  }
+}
