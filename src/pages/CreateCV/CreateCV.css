@@ -22,7 +22,8 @@
   margin-top: 30px;
 }
 
-.app__createCV form input[type="text"] {
+.app__createCV form input[type="text"],
+.app__createCV form input[type="number"] {
   all: unset;
 
   display: flex;

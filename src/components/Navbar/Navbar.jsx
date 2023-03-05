@@ -6,24 +6,7 @@ import { Link } from "react-router-dom";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import ArrowUp from "../../assets/ArrowUp.png";
 
-import axios from "axios";
-
-const baseURL =
-  "https://int20back.brainstormingapplication.com/api/myprojects/";
-
 const Navbar = () => {
-  React.useEffect(() => {
-    axios
-      .get(userURL, {
-        headers: {
-          Authorization: "Bearer " + localStorage.getItem("token"),
-        },
-      })
-      .then((response) => {
-        setUser(response.data[0]);
-        console.log(response);
-      });
-  }, []);
   // -------------------------------------------------------------
   const [toggleMenu, setToggleMenu] = React.useState(false);
 
