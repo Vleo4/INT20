@@ -5,6 +5,7 @@
   padding-right: 140px;
   margin-left: 243px;
   margin-right: 243px;
+  min-height: 100vh;
 }
 
 .app__projects-posts {

@@ -5,4 +5,13 @@ import ProjectCard from "./ProjectCard/ProjectCard";
 import RequestCard from "./RequestCard/RequestCard";
 import CVCard from "./CVCard/CVCard";
 
-export { Navbar, Footer, Subheading, ProjectCard, RequestCard, CVCard };
+
+export {
+  Navbar,
+  Footer,
+  Subheading,
+  ProjectCard,
+  RequestCard,
+  CVCard,
+
+};

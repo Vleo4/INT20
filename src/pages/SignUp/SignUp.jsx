@@ -1,30 +1,25 @@
 import React, { useState } from "react";
-import "./Login.css";
+import "./SignUp.css";
 import LogoLogin from "../../assets/LogoLogin.png";
-import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
-const Login = ({ setIsAuth }) => {
-  const [username, setUsername] = useState("");
+const SignUp = () => {
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
+  const [username, setUsername] = useState("");
+
   const logPost = async () => {
-    console.log(username, password);
     await axios
-      .post("https://int20back.brainstormingapplication.com/api/token/", {
+      .post("https://int20back.brainstormingapplication.com/api/register/", {
         username,
+        email,
         password,
       })
-      .then((response) => {
-        console.log(response);
-        const token = response.data.access;
-        setIsAuth(true);
-
-        localStorage.setItem("token", token);
-
-        navigate("/projects");
-      })
-      .catch((err) => console.log(err));
+      .then((res) => res.data)
+      .then((res) => {
+        console.log(res);
+      });
   };
 
   return (
@@ -40,16 +35,26 @@ const Login = ({ setIsAuth }) => {
         </div>
       </div>
       <div className="app__login-main">
-        <div className="app__login-main_loginCard">
-          <h3>Вхід</h3>
+        <div className="app__login-main_signupCard">
+          <h3>Реєстрація</h3>
           <form
             onSubmit={(e) => {
               e.preventDefault();
               logPost();
-              setUsername("");
+              setEmail("");
               setPassword("");
+              setUsername("");
             }}
           >
+            <input
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              type="email"
+              placeholder="Електронна пошта"
+              style={{ marginTop: "50px", marginBottom: "40px" }}
+            />
             <input
               value={username}
               onChange={(e) => {
@@ -57,7 +62,7 @@ const Login = ({ setIsAuth }) => {
               }}
               type="text"
               placeholder="Логін"
-              style={{ marginTop: "50px", marginBottom: "40px" }}
+              style={{ marginBottom: "40px" }}
             />
             <input
               type="password"
@@ -67,10 +72,9 @@ const Login = ({ setIsAuth }) => {
                 setPassword(e.target.value);
               }}
             />
-            <button type="submit">Продовжити</button>
-            <Link className="app__login-main_loginCard-question" to="/signup">
-              Не маєте аккаунту?
-            </Link>
+            <button type="submit">
+              <Link to="/login">Продовжити</Link>
+            </button>
           </form>
         </div>
       </div>
@@ -78,4 +82,4 @@ const Login = ({ setIsAuth }) => {
   );
 };
 
-export default Login;
+export default SignUp;

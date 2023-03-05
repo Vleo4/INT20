@@ -3,6 +3,10 @@ import { ProjectCard, Subheading } from "../../components";
 import "./Profile.css";
 import ProfilePhoto from "../../assets/ProfilePhoto.png";
 import ExpandButton from "../../assets/ExpandButton.png";
+import { Link } from "react-router-dom";
+import axios from "axios";
+
+const userURL = "https://int20back.brainstormingapplication.com/api/profile/";
 
 const Profile = () => {
   const [showAllProjects, setShowAllProjects] = useState(false);
@@ -24,9 +28,22 @@ const Profile = () => {
     setShowAllTakeProjects(!showAllProjects);
     setIsTakeImageRotated(!isImageRotated);
   };
+  // -------------------------------------------------------
+
   return (
     <div className="app__profile bg__wrap">
       <Subheading title="Профіль" />
+      <Link
+        style={{ alignSelf: "flex-start" }}
+        to="/login"
+        className="app__login-main_loginCard-question"
+        onClick={() => {
+          localStorage.removeItem("token");
+          setIsAuth(false);
+        }}
+      >
+        Вийти з профілю
+      </Link>
       <div className="app__profile-info">
         <img src={ProfilePhoto} alt="ProfilePhoto" />
         <div className="app__profile-info_text">

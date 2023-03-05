@@ -2,20 +2,16 @@ import React from "react";
 import "./ProjectCard.css";
 import Like from "../../assets/Like.png";
 
-const ProjectCard = () => {
+const ProjectCard = ({ data }) => {
+  const { title, description, count_of_likes, customer } = data;
   return (
     <div className="app__projectCard">
-      <h2>Title</h2>
-      <p className="app__projectCard-desc">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-        nobis reprehenderit quae harum accusantium expedita iusto adipisci alias
-        architecto ipsa, temporibus consectetur quaerat doloremque sint neque
-        iure, culpa officia aut.
-      </p>
+      <h2>{title}</h2>
+      <p className="app__projectCard-desc">{description}</p>
       <div className="app__projectCard-info">
-        <p>Creator</p>
+        <p>{customer}</p>
         <div className="app__projectCard-info_likes">
-          <p>123</p>
+          <p>{count_of_likes}</p>
           <img src={Like} alt="Like" />
         </div>
       </div>
