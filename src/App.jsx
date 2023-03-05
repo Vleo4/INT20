@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { BrowserRouter, Link, Navigate, Route, Routes } from "react-router-dom";
 import { Navbar, Footer } from "./components";
 import "./App.css";
@@ -18,13 +18,26 @@ import {
 } from "./pages";
 
 const App = () => {
+  
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      setIsAuth(true);
+    }
+  }, []);
+
+  const handleLogout = () => {
+    setIsAuth(false);
+    localStorage.removeItem("token");
+  };
+  // --------------------------------------
   const [isAuth, setIsAuth] = useState(
     localStorage.getItem("token") ? true : false
   );
   return (
     <div>
       <BrowserRouter>
-        {isAuth && <Navbar />}
+      {isAuth && <Navbar handleLogout={handleLogout} />}
         <Routes>
           <Route
             path="/login"
