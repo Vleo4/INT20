@@ -14,11 +14,13 @@ const orderURL =
 
 const ProjectView = () => {
   const [post, setPost] = React.useState(null);
+  const [developers, setDevelopers] = React.useState([]);
   const { id } = useParams();
 
   React.useEffect(() => {
     axios.get(baseURL + "/" + id + "/").then((response) => {
       setPost(response.data);
+      setDevelopers(response.data.project.developers);
       console.log(response);
     });
   }, []);
@@ -78,10 +80,16 @@ const ProjectView = () => {
           <h1>{post.project.title}</h1>
           <h2>Про проєкт:</h2>
           <p>{post.project.description}</p>
-          <h2>Замовник</h2>
+          <h2>Організатор:</h2>
           <p>{post.project.customer}</p>
           <h2>Команда:</h2>
-          <p>{post.project.developers}</p>
+          {developers && (
+            <>
+              {developers.map((developer) => {
+                return <p key={developer.id}>{developer},</p>;
+              })}
+            </>
+          )}
           <h2>Доступ:</h2>
           <p>{post.project.open ? "Відкрито" : "Закрито"}</p>
           <div className="app__projectView-stats">

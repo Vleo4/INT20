@@ -33,13 +33,17 @@ const App = () => {
           {isAuth ? (
             <>
               <Route path="/projects" exact element={<Projects />} />
-              <Route path="/projects/project/:id" exact element={<ProjectView />} />
+              <Route
+                path="/projects/project/:id"
+                exact
+                element={<ProjectView />}
+              />
               <Route path="/create-project" exact element={<CreateProject />} />
               <Route path="/profile" exact element={<Profile />} />
               <Route path="/requests" exact element={<Requests />} />
               <Route path="/cvs" exact element={<CVs />} />
               <Route path="/my-cv" exact element={<CreateCV />} />
-              <Route path="/cv" exact element={<CVView />} />
+              <Route path="/cv/:id" exact element={<CVView />} />
             </>
           ) : (
             <Route path="*" element={<Navigate to="/login" replace />} />

@@ -8,7 +8,6 @@
   padding-bottom: 54px;
   padding-right: 20px;
   margin-bottom: 20px;
-
   cursor: pointer;
 }
 
@@ -21,28 +20,23 @@
   margin-bottom: 5px;
 }
 
-.app__cvCard-hard,
-.app__cvCard-soft,
-.app__cvCard-languages {
+.app__cvCard-hard {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-top: 10px;
 }
 
-.app__cvCard-hard p:first-child,
-.app__cvCard-soft p:first-child,
-.app__cvCard-languages p:first-child {
+.app__cvCard-hard p:first-child {
   font-family: var(--font-mont);
   font-weight: 400;
   font-size: 32px;
   line-height: 39px;
   color: #000000;
   white-space: nowrap;
+  margin-right: 10px;
 }
-.app__cvCard-hard p:last-child,
-.app__cvCard-soft p:last-child,
-.app__cvCard-languages p:last-child {
+.app__cvCard-hard p:last-child {
   font-family: var(--font-mont);
   font-weight: 400;
   font-size: 32px;
@@ -62,15 +56,11 @@
     color: #000000;
     margin-bottom: 5px;
   }
-  .app__cvCard-hard p:first-child,
-  .app__cvCard-soft p:first-child,
-  .app__cvCard-languages p:first-child {
+  .app__cvCard-hard p:first-child {
     font-size: 22px;
     line-height: 29px;
   }
-  .app__cvCard-hard p:last-child,
-  .app__cvCard-soft p:last-child,
-  .app__cvCard-languages p:last-child {
+  .app__cvCard-hard p:last-child {
     font-size: 22px;
     line-height: 29px;
   }

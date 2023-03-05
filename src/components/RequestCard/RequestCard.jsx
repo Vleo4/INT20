@@ -9,13 +9,28 @@ import axios from "axios";
 const approveRequestURL =
   "https://int20back.brainstormingapplication.com/api/approveorder";
 
+const closeRequestURL =
+  "https://int20back.brainstormingapplication.com/api/closeorder";
+
 const RequestCard = ({ data, id }) => {
+  const [isRequestClosed, setIsRequestClosed] = useState(false);
+  const [isRequestApproved, setIsRequestApproved] = useState(false);
   console.log(id);
   const approveRequest = () => {
     axios.put(approveRequestURL + "/" + id + "/", {}).then((response) => {
       console.log(response);
+      setIsRequestApproved(true);
     });
   };
+  const closeRequest = () => {
+    axios.put(closeRequestURL + "/" + id + "/", {}).then((response) => {
+      console.log(response);
+      setIsRequestClosed(true);
+    });
+  };
+  if (isRequestClosed || isRequestApproved) {
+    return null;
+  }
   // -----------------------------------------------------
   const { project, executor } = data;
   return (
@@ -23,13 +38,23 @@ const RequestCard = ({ data, id }) => {
       <h2>{project}</h2>
       <div className="app__requestCard-content">
         <div className="app__requestCard-content_text">
-          <p className="app__requestCard-content_text-link">{executor.username}</p>
-          <Link className="app__requestCard-content_text-link" to="/cv">
+          <Link
+            className="app__requestCard-content_text-link"
+            to={`/profile/${executor.id}`}
+            key={executor.id}
+          >
+            {executor.username}
+          </Link>
+          <Link
+            className="app__requestCard-content_text-link"
+            to={`/cv/${executor.id}`}
+            key={executor.id}
+          >
             Переглянути резюме
           </Link>
         </div>
         <div className="app__requestCard-content_buttons">
-          <button type="submit">
+          <button type="submit" onClick={closeRequest}>
             <img src={CrossIcon} alt="CrossIcon" style={{ width: "30px" }} />
           </button>
           <button type="submit" onClick={approveRequest}>
