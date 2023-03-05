@@ -2,24 +2,33 @@ import React, { useState } from "react";
 import "./SignUp.css";
 import LogoLogin from "../../assets/LogoLogin.png";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const SignUp = () => {
+const SignUp = ({ setIsAuth }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
-
+  const navigate = useNavigate();
   const logPost = async () => {
-    await axios
-      .post("https://int20back.brainstormingapplication.com/api/register/", {
-        username,
-        email,
-        password,
-      })
-      .then((res) => res.data)
-      .then((res) => {
-        console.log(res);
-      });
+    console.log(username),
+      console.log(email),
+      console.log(password),
+      await axios
+        .post("https://int20back.brainstormingapplication.com/api/register/", {
+          username,
+          email,
+          password,
+        })
+        .then((response) => {
+          console.log(response);
+          const token = response.data.access;
+          setIsAuth(true);
+
+          localStorage.setItem("token", token);
+
+          navigate("/projects");
+        })
+        .catch((err) => console.log(err));
   };
 
   return (
@@ -72,9 +81,10 @@ const SignUp = () => {
                 setPassword(e.target.value);
               }}
             />
-            <button type="submit">
-              <Link to="/login">Продовжити</Link>
-            </button>
+            <button type="submit">Продовжити</button>
+            <Link className="app__login-main_loginCard-question" to="/login">
+              Вже маєте аккаунт?
+            </Link>
           </form>
         </div>
       </div>

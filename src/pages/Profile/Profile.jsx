@@ -7,9 +7,8 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import jwtDecode from "jwt-decode";
 
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Popover from 'react-bootstrap/Popover';
-
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Popover from "react-bootstrap/Popover";
 
 const userURL = "https://int20back.brainstormingapplication.com/api/profile";
 
