@@ -53,6 +53,9 @@ const Navbar = () => {
             <Link className="app__navbar-links_link" to="/dev-projects">
               Беру участь
             </Link>
+            <Link className="app__navbar-links_link" to="/create-project">
+              Створити проєкт
+            </Link>
           </div>
         </div>
         <Link to="/requests" className="app__navbar-links_link">
