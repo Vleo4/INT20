@@ -64,7 +64,7 @@ const App = () => {
               <Route path="/profile" exact element={<Profile />} />
               <Route path="/requests" exact element={<Requests />} />
               <Route path="/cvs" exact element={<CVs />} />
-              <Route path="/my-cv" exact element={<CreateCV />} />
+              <Route path="/create-cv" exact element={<CreateCV />} />
               <Route path="/cv/:id" exact element={<CVView />} />
             </>
           ) : (

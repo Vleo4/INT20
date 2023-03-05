@@ -6,7 +6,29 @@ import { Link } from "react-router-dom";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import ArrowUp from "../../assets/ArrowUp.png";
 
+import jwtDecode from "jwt-decode";
+import axios from "axios";
+
+const myCvURL = "https://int20back.brainstormingapplication.com/api/getusercv/";
+
 const Navbar = () => {
+  const [user, setUser] = React.useState(null);
+  const [myCv, setMyCv] = React.useState(null);
+  React.useEffect(() => {
+    const token = jwtDecode(localStorage.getItem("token"));
+    axios
+      .get(myCvURL + token.user_id + "/", {
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("token"),
+        },
+      })
+      .then((response) => {
+        setUser(response.data);
+        setMyCv(response.data);
+        console.log(response);
+      });
+  }, []);
+
   // -------------------------------------------------------------
   const [toggleMenu, setToggleMenu] = React.useState(false);
 
@@ -41,9 +63,18 @@ const Navbar = () => {
             Резюме <img src={ArrowUp} alt="ArrowUp" />
           </button>
           <div class="app__navbar-links_dropdown-content">
-            <Link className="app__navbar-links_link" to="/my-cv">
-              Моє резюме
-            </Link>
+            {myCv && (
+              <>
+                <Link
+                  className="app__navbar-links_link"
+                  to={`/cv/${myCv[0].id}`}
+                  
+                >
+                  Моє резюме
+                </Link>
+              </>
+            )}
+
             <Link className="app__navbar-links_link" to="/cvs">
               Усі резюме
             </Link>
