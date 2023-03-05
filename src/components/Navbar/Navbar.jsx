@@ -17,7 +17,7 @@ const Navbar = () => {
         <h2>CrewUp</h2>
       </div>
       <div className="app__navbar-links">
-        <div class="app__navbar-links_dropdown">
+        <div className="app__navbar-links_dropdown">
           <button class="app__navbar-links_dropdown-dropbtn">
             Проєкти <img src={ArrowUp} alt="ArrowUp" />
           </button>
@@ -28,7 +28,7 @@ const Navbar = () => {
             <Link className="app__navbar-links_link" to="/my-projects">
               Мої проєкти
             </Link>
-            <Link className="app__navbar-links_link" to="/my-projects">
+            <Link className="app__navbar-links_link" to="/dev-projects">
               Беру участь
             </Link>
           </div>
@@ -89,7 +89,7 @@ const Navbar = () => {
                 Мої проєкти
               </Link>
               <Link
-                to="/my-projects"
+                to="/dev-projects"
                 className="app__navbar-smallscreen_links-link"
               >
                 Беру участь

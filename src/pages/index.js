@@ -9,6 +9,7 @@ import CreateCV from "./CreateCV/CreateCV";
 import CVView from "./CVView/CVView";
 import SignUp from "./SignUp/SignUp";
 import MyProjects from "./MyProjects/MyProjects";
+import DevProjects from "./DevProjects/DevProjects";
 
 export {
   Login,
@@ -22,4 +23,5 @@ export {
   CVView,
   SignUp,
   MyProjects,
+  DevProjects,
 };

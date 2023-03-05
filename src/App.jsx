@@ -7,6 +7,7 @@ import {
   CreateProject,
   CVs,
   CVView,
+  DevProjects,
   Login,
   MyProjects,
   Profile,
@@ -30,16 +31,22 @@ const App = () => {
             exact
             element={<Login setIsAuth={setIsAuth} />}
           />
-          <Route path="/signup" exact element={<SignUp setIsAuth={setIsAuth}/>} />
+          <Route
+            path="/signup"
+            exact
+            element={<SignUp setIsAuth={setIsAuth} />}
+          />
           {isAuth ? (
             <>
               <Route path="/projects" exact element={<Projects />} />
               <Route path="/my-projects" exact element={<MyProjects />} />
+              <Route path="/dev-projects" exact element={<DevProjects />} />
               <Route
                 path="/projects/project/:id"
                 exact
                 element={<ProjectView />}
               />
+
               <Route path="/create-project" exact element={<CreateProject />} />
               <Route path="/profile" exact element={<Profile />} />
               <Route path="/requests" exact element={<Requests />} />

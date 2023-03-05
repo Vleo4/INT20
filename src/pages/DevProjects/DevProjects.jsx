@@ -1,6 +1,5 @@
 import React from "react";
-import "./MyProjects.css";
-
+import "./DevProjects.css";
 import axios from "axios";
 import { ProjectCard, Subheading } from "../../components";
 import { Link } from "react-router-dom";
@@ -9,7 +8,7 @@ import jwtDecode from "jwt-decode";
 const myProjectsURL =
   "https://int20back.brainstormingapplication.com/api/myprojects/1/";
 
-const MyProjects = () => {
+const DevProjects = () => {
   const [myProject, setMyProject] = React.useState([]);
   const [user, setUser] = React.useState(null);
 
@@ -22,13 +21,13 @@ const MyProjects = () => {
         },
       })
       .then((response) => {
-        setMyProject(response.data.cusprojects);
+        setMyProject(response.data.devprojects);
         console.log(response);
       });
   }, []);
   return (
     <div className="app__projects bg__wrap">
-      <Subheading title="Мої проєкти" />
+      <Subheading title="Беру участь" />
       <div className="app__projects-posts">
         <>
           {myProject.map((project) => {
@@ -44,4 +43,4 @@ const MyProjects = () => {
   );
 };
 
-export default MyProjects;
+export default DevProjects;
